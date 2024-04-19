@@ -9,8 +9,8 @@ $port       = '5432';
 
 $conn = pg_connect("host=$host dbname=$dbname user=$username password=$password " );
 
-if($conn){
-    die("connection error: " .pg_last_error());
+if(!$conn){
+    die("connection error: ".pg_last_error());
 }else{
     echo " Success !!!!";
 }
