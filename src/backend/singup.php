@@ -7,7 +7,7 @@
     $enc_pass = md5($passwd);
 
     $sql = "
-        INSERT INTO user (fullname, email, password) 
+        INSERT INTO users2 (fullname, email, password) 
             VALUES ('$fullname', '$email','$enc_pass')
     ";
 
@@ -19,7 +19,7 @@
     }
 
     //Close connection
-    pg_close($conn)
+    pg_close($conn);
 
     
 ?>
